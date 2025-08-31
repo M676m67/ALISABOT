@@ -138,33 +138,11 @@
   <p>With HTML, you can create structured, readable, and interactive web pages.</p>
 </section>
 <hr />
-  <section id="playground">
-    <h2>Interactive Code Playground</h2>
-    <p>Try writing your own HTML, CSS, and JavaScript code below. Click "Run" to see your code in action!</p>
-    <textarea id="code" rows="12" placeholder="Write your HTML code here..."><!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body { font-family: Arial; padding: 20px; }
-        h1 { color: #3b82f6; }
-    </style>
-</head>
-<body>
-    <h1>Hello World!</h1>
-    <p>Welcome to the playground!</p>
-</body>
-</html></textarea>
-    <br><br>
-    <button onclick="runCode()">Run Code</button>
-    <button onclick="clearCode()"> Clear</button>
-    <iframe id="output"></iframe>
-    </section>
-<hr />
-<section id="about">
+  <section id="about">
   <h2>About me</h2>
   <p>Fill out the form below and send me a message!</p>
   
-  <form action="#" method="POST">
+  <form id="contactForm" action="#" method="POST">
     <label for="name">Your Name:</label><br>
     <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
     
@@ -217,6 +195,13 @@
     background-color: #2563eb;
   }
 </style>
+
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+  });
+</script>
   <script src="main.js"></script>
 </body>
 </html>
