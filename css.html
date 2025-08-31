@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching Web Languages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-indicator" id="scroll-indicator"></div>
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">WebLearn</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="./Home.html" >Home</a></li>
+      <li><a href="#css" data-section="css">About Css</a></li>
+      <li><a href="#playground" data-section="playground">Playground</a></li>
+      <li><a href="#about" data-section="about">About</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+  <header>
+    <h1>Learn Web Development</h1>
+    <p>Master HTML, CSS, and JavaScript with our interactive tutorials and playground.</p>
+  </header>
+<section id="css">
+  <h2><b>Complete CSS Guide</b></h2>
+
+  <p>
+    CSS = <b>Cascading Style Sheets</b> is used to style and layout web pages.
+    It allows you to control colors, fonts, spacing, positioning, animations, and responsive design.
+    CSS can be added inline, internally inside &lt<b>;style&gt;</b> tags, or externally via a .css file.
+  </p>
+
+  <h3>1. Adding CSS</h3>
+  <pre><code>&lt;style&gt;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+h1 {
+    color: #3b82f6;
+}
+&lt;/style&gt;
+
+&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+  <h3>2. Selectors</h3>
+  <pre><code>/* Element Selector */
+p {
+    color: red;
+}
+
+/* Class Selector */
+.demo-class {
+    background-color: yellow;
+}
+
+/* ID Selector */
+#demo-id {
+    font-size: 20px;
+}
+
+/* Group Selector */
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+/* Descendant Selector */
+div p {
+    color: green;
+}</code></pre>
+
+  <h3>3. Colors & Backgrounds</h3>
+  <pre><code>body {
+    background-color: #e0e0e0;
+    color: #333;
+}
+p {
+    color: rgb(255,0,0);
+}
+div {
+    background-image: url("image.jpg");
+    background-size: cover;
+    background-position: center;
+}</code></pre>
+
+  <h3>4. Fonts & Text</h3>
+  <pre><code>p {
+    font-family: "Cairo", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}</code></pre>
+
+  <h3>5. Box Model</h3>
+  <pre><code>div {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #3b82f6;
+    box-sizing: border-box;
+}</code></pre>
+
+  <h3>6. Display & Positioning</h3>
+  <pre><code>div {
+    display: block;
+}
+
+span {
+    display: inline-block;
+}
+
+.container {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.fixed-box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 0;
+}</code></pre>
+
+  <h3>7. Flexbox</h3>
+  <pre><code>.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1 1 100px;
+    margin: 10px;
+    background-color: #3b82f6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}</code></pre>
+
+  <h3>8. Grid</h3>
+  <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #3b82f6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}</code></pre>
+
+  <h3>9. Pseudo-classes & Pseudo-elements</h3>
+  <pre><code>a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+p::before {
+    content: "⭐ ";
+}
+
+p::after {
+    content: " ⭐";
+}</code></pre>
+
+  <h3>10. Transitions & Animations</h3>
+  <pre><code>div {
+    width: 100px;
+    height: 100px;
+    background-color: #3b82f6;
+    transition: all 0.5s ease;
+}
+
+div:hover {
+    background-color: red;
+    transform: scale(1.2);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+.box {
+    animation: slide 2s infinite;
+}</code></pre>
+
+  <h3>11. Media Queries (Responsive Design)</h3>
+  <pre><code>@media screen and (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+    .container {
+        flex-direction: column;
+    }
+}</code></pre>
+
+  <h3>12. Shadows & Borders</h3>
+  <pre><code>div {
+    border-radius: 10px;
+    border: 2px solid #3b82f6;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}</code></pre>
+
+  <h3>13. Overflow & Scroll</h3>
+  <pre><code>.scroll-box {
+    width: 200px;
+    height: 100px;
+    overflow: auto;
+    border: 1px solid #ccc;
+}</code></pre>
+
+  <h3>14. Opacity & Visibility</h3>
+  <pre><code>.hidden {
+    visibility: hidden;
+}
+
+.transparent {
+    opacity: 0.5;
+}</code></pre>
+
+  <h3>15. Z-index & Layering</h3>
+  <pre><code>.behind {
+    z-index: 1;
+}
+
+.above {
+    z-index: 10;
+    position: relative;
+}</code></pre>
+
+</section>
+  
+<hr />
+  <section id="playground">
+    <h2>Interactive Code Playground</h2>
+    <p>Try writing your own HTML, CSS, and JavaScript code below. Click "Run" to see your code in action!</p>
+    <textarea id="code" rows="12" placeholder="Write your HTML code here..."><!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        h1 { color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Welcome to the playground!</p>
+</body>
+</html></textarea>
+    <br><br>
+    <button onclick="runCode()">Run Code</button>
+    <button onclick="clearCode()"> Clear</button>
+    <iframe id="output"></iframe>
+    </section>
+<hr />
+<section id="about">
+  <h2>About me</h2>
+  <p>Fill out the form below and send me a message!</p>
+  
+  <form action="./send.php" method="POST">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+    
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+    
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br>
+    
+    <button type="submit">Send Message</button>
+  </form>
+  
+  <p>All messages will be sent directly to <b>Mariam.</b></p>
+</section>
+
+<style>
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    outline: none;
+  }
+  
+  form button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #2563eb;
+  }
+</style>
+  <script src="main.js"></script>
+</body>
+</html>
