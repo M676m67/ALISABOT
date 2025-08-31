@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching Web Languages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-indicator" id="scroll-indicator"></div>
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">WebLearn</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="./Home.html" >Home</a></li>
+      <li><a href="#javascript" data-section="javascript">About JavaScript</a></li>
+      <li><a href="#playground" data-section="playground">Playground</a></li>
+      <li><a href="#about" data-section="about">About</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+  <header>
+    <h1>Learn Web Development</h1>
+    <p>Master HTML, CSS, and JavaScript with our interactive tutorials and playground.</p>
+  </header>
+<section id="javascript">
+  <h2><b>Complete JavaScript Guide</b></h2>
+  
+  <p> js = <b>JavaScript is a powerful</b>, high-level programming language that is mainly used for web development.
+    It allows you to create dynamic and interactive web pages, manipulate the DOM, handle events,
+    perform calculations, work with data, and communicate with servers through <b>APIs.</b>
+    JavaScript can be used on both client-side <b>browser</b> and server-side <b>Node.js</b>.
+  </p>
+  
+  <h3>1. Adding JavaScript</h3>
+  <pre><code>&lt;script&gt;
+console.log("Hello from JS!")
+alert("Hello Mariam!")
+&lt;/script&gt;
+
+&lt;script src="main.js"&gt;&lt;/script&gt;</code></pre>
+  
+  <h3>2. Variables</h3>
+  <pre><code>var name = "Mariam"
+console.log(name)
+
+let age = 16
+console.log(age)
+age = 17
+
+const PI = 3.14
+console.log(PI)</code></pre>
+  
+  <h3>3. Data Types</h3>
+  <pre><code>let number = 10
+let nameStr = "Mariam"
+let isStudent = true
+let hobbies = ["reading","coding"]
+let person = { name: "Mariam", age: 16 }
+let nothing = null
+let notDefined</code></pre>
+  
+  <h3>4. Operators</h3>
+  <pre><code>let a = 10
+let b = 5
+console.log(a + b)
+console.log(a - b)
+console.log(a * b)
+console.log(a / b)
+console.log(a % b)
+console.log(a ** 2)</code></pre>
+  
+  <h3>5. Conditional Statements</h3>
+  <pre><code>let ageCheck = 16
+if(ageCheck >= 18){
+    console.log("Adult")
+}else if(ageCheck >= 13){
+    console.log("Teenager")
+}else{
+    console.log("Child")
+}</code></pre>
+  
+  <h3>6. Loops</h3>
+  <pre><code>for(let i = 1; i <= 5; i++){
+    console.log("Number " + i)
+}
+
+let j = 1
+while(j <= 5){
+    console.log("While " + j)
+    j++
+}
+
+let colors = ["red","green","blue"]
+for(let color of colors){
+    console.log(color)
+}</code></pre>
+  
+  <h3>7. Functions</h3>
+  <pre><code>function greet(name){
+    return "Hello " + name
+}
+console.log(greet("Mariam"))
+
+const add = (x, y) => x + y
+console.log(add(5,3))</code></pre>
+  
+  <h3>8. DOM Manipulation</h3>
+  <pre><code>document.getElementById("js-demo").innerText = "Text changed!"
+document.getElementById("js-demo").style.color = "red"
+&lt;p id="js-demo"&gt;Original text&lt;/p&gt;
+
+document.querySelector(".demo-class").style.backgroundColor = "yellow"
+document.querySelectorAll("p")[0].innerText = "First paragraph changed"</code></pre>
+  
+  <h3>9. Events</h3>
+  <pre><code>function showAlert(){
+    alert("Button clicked!")
+}
+document.getElementById("myButton").addEventListener("click", showAlert)
+&lt;button id="myButton"&gt;Click me&lt;/button&gt;</code></pre>
+  
+  <h3>10. Arrays</h3>
+  <pre><code>let fruits = ["apple","banana","orange"]
+fruits.push("mango")
+fruits.pop()
+fruits.shift()
+fruits.unshift("kiwi")
+console.log(fruits)
+console.log(fruits.length)
+console.log(fruits.indexOf("banana"))</code></pre>
+  
+  <h3>11. Objects</h3>
+  <pre><code>let personObj = {name:"Mariam", age:16, hobbies:["reading","coding"]}
+console.log(personObj.name)
+console.log(personObj.hobbies[0])
+personObj.age = 17
+console.log(personObj)
+
+let key = "name"
+console.log(personObj[key])</code></pre>
+  
+  <h3>12. Ternary Operator</h3>
+  <pre><code>let ageT = 16
+let status = (ageT >= 18) ? "Adult" : "Teenager"
+console.log(status)</code></pre>
+  
+  <h3>13. try...catch</h3>
+  <pre><code>try{
+    riskyFunction()
+}catch(error){
+    console.log("Error occurred:", error)
+}finally{
+    console.log("Execution finished")
+}</code></pre>
+  
+  <h3>14. Advanced Topics: Promises & async/await</h3>
+  <pre><code>let promise = new Promise((resolve, reject) => {
+    let success = true
+    if(success){
+        resolve("Task completed")
+    }else{
+        reject("Task failed")
+    }
+})
+promise.then(result =&gt; console.log(result)).catch(error =&gt; console.log(error))
+
+async function fetchData(){
+    return "Data loaded"
+}
+fetchData().then(data =&gt; console.log(data))</code></pre>
+  
+  <h3>15. LocalStorage & SessionStorage</h3>
+  <pre><code>localStorage.setItem("name","Mariam")
+console.log(localStorage.getItem("name"))
+localStorage.removeItem("name")
+
+sessionStorage.setItem("age","16")
+console.log(sessionStorage.getItem("age"))</code></pre>
+  
+  <h3>16. JSON & API Handling</h3>
+  <pre><code>let personJSON = '{"name":"Mariam","age":16}'
+let personObj2 = JSON.parse(personJSON)
+console.log(personObj2.name)
+
+let newJSON = JSON.stringify(personObj2)
+console.log(newJSON)
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+.then(response =&gt; response.json())
+.then(data =&gt; console.log(data))</code></pre>
+  
+</section>
+  
+<hr />
+  <section id="playground">
+    <h2>Interactive Code Playground</h2>
+    <p>Try writing your own HTML, CSS, and JavaScript code below. Click "Run" to see your code in action!</p>
+    <textarea id="code" rows="12" placeholder="Write your HTML code here..."><!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        h1 { color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Welcome to the playground!</p>
+</body>
+</html></textarea>
+    <br><br>
+    <button onclick="runCode()">Run Code</button>
+    <button onclick="clearCode()"> Clear</button>
+    <iframe id="output"></iframe>
+    </section>
+<hr />
+<section id="about">
+  <h2>About me</h2>
+  <p>Fill out the form below and send me a message!</p>
+  
+  <form action="./send.php" method="POST">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+    
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+    
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br>
+    
+    <button type="submit">Send Message</button>
+  </form>
+  
+  <p>All messages will be sent directly to <b>Mariam.</b></p>
+</section>
+
+<style>
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    outline: none;
+  }
+  
+  form button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #2563eb;
+  }
+</style>
+  <script src="main.js"></script>
+</body>
+</html>
