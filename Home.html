@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching Web Languages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-indicator" id="scroll-indicator"></div>
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">WebLearn</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#html" data-section="html">HTML</a></li>
+      <li><a href="#css" data-section="css">CSS</a></li>
+      <li><a href="#js" data-section="js">JavaScript</a></li>
+      <li><a href="#playground" data-section="playground">Playground</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+  <header>
+    <h1>Learn Web Development</h1>
+    <p>Master HTML, CSS, and JavaScript with our interactive tutorials and playground.</p>
+  </header>
+
+  <section id="html">
+    <h2><b>What is HTML?</b></h2>
+    <p>HTML = <b>HyperText Markup Language</b> is the standard markup language for creating web pages. It describes the structure and content of web pages using elements <b>and tags.</b></p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>To learn more about <a href="html.html"><b>HTML fundamentals</b></a></p>
+  </section>
+
+  <section id="css">
+    <h2><b>What is CSS?</b></h2>
+    <p>CSS = <b>Cascading Style Sheets</b> is used to style and layout web pages. It controls the visual presentation of <b>HTML</b> elements including colors, fonts, spacing, and positioning.</p>
+    <pre><code>/* CSS Example */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}</code></pre>
+    <p>To learn more about <a href="css.html"><b>CSS styling</b></a></p>
+  </section>
+
+  <section id="js">
+    <h2><b>What is JavaScript?</b></h2>
+    <p><b>JavaScript is a programming language</b> that enables interactive web pages. It's an essential part of web applications alongside <b>HTML</b> and <b>CSS</b>.</p>
+    <pre><code>// JavaScript Example
+function greetUser(name) {
+  const greeting = `Hello, ${name}! Welcome to JavaScript.`;
+  console.log(greeting);
+  
+  // Add interactivity
+  document.getElementById('output').textContent = greeting;
+}
+
+// Event listener
+document.addEventListener('DOMContentLoaded', function() {
+  greetUser('Developer');
+});</code></pre>
+    <p>To learn more about <a href="JavaScript.html"><b>JavaScript programming</b></a></p>
+  </section>
+
+  <hr />
+  <section id="playground">
+    <h2>Interactive Code Playground</h2>
+    <p>Try writing your own HTML, CSS, and JavaScript code below. Click "Run" to see your code in action!</p>
+    <textarea id="code" rows="12" placeholder="Write your HTML code here..."><!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        h1 { color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Welcome to the playground!</p>
+</body>
+</html></textarea>
+    <br><br>
+    <button onclick="runCode()">Run Code</button>
+    <button onclick="clearCode()"> Clear</button>
+    <iframe id="output"></iframe>
+    </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
