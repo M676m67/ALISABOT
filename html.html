@@ -1,105 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching Web Languages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-indicator" id="scroll-indicator"></div>
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">WebLearn</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="./Home.html" >Home</a></li>
+      <li><a href="#html" data-section="html">About Html</a></li>
+      <li><a href="#playground" data-section="playground">Playground</a></li>
+      <li><a href="#about" data-section="about">About</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
 
-    const navbar = document.getElementById('navbar');
-    const scrollIndicator = document.getElementById('scroll-indicator');
+  <header>
+    <h1>Learn Web Development</h1>
+    <p>Master HTML, CSS, and JavaScript with our interactive tutorials and playground.</p>
+  </header>
+
+  <section id="html">
+  <h2><b>Complete HTML Guide</b></h2>
+  
+  <p>
+    HTML = <b>HyperText Markup Language</b> is the standard language for creating web pages.
+    It is used to describe the <b>structure</b> and <b>content</b> of a webpage using <i>tags</i> and <i>elements</i>.
+  </p>
+  
+  <h3>1. Basic HTML Structure</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+  <h3>2. Headings</h3>
+  <pre><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Sub Title&lt;/h2&gt;
+&lt;h3&gt;Smaller Heading&lt;/h3&gt;
+&lt;h4&gt;Heading Level 4&lt;/h4&gt;
+&lt;h5&gt;Heading Level 5&lt;/h5&gt;
+&lt;h6&gt;Heading Level 6&lt;/h6&gt;</code></pre>
+  
+  <h3>3. Paragraphs & Text Formatting</h3>
+  <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;b&gt;Bold Text&lt;/b&gt;
+&lt;strong&gt;Important Bold Text&lt;/strong&gt;
+&lt;i&gt;Italic Text&lt;/i&gt;
+&lt;em&gt;Important Italic Text&lt;/em&gt;
+&lt;u&gt;Underlined Text&lt;/u&gt;
+&lt;mark&gt;Highlighted Text&lt;/mark&gt;
+&lt;del&gt;Deleted Text&lt;/del&gt;
+&lt;ins&gt;Inserted Text&lt;/ins&gt;
+&lt;sup&gt;Superscript&lt;/sup&gt;
+&lt;sub&gt;Subscript&lt;/sub&gt;</code></pre>
+  
+  <h3>4. Links & Images</h3>
+  <pre><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description of image"&gt;</code></pre>
+  
+  <h3>5. Lists</h3>
+  <pre><code>&lt;ul&gt;  <!-- Unordered List -->
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;  <!-- Ordered List -->
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+  
+  <h3>6. Tables</h3>
+  <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Mariam&lt;/td&gt;
+        &lt;td&gt;16&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  
+  <h3>7. Forms</h3>
+  <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="name" placeholder="Enter your name"&gt;
+    &lt;br&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" name="email" placeholder="Enter your email"&gt;
+    &lt;br&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  
+  <h3>8. Multimedia</h3>
+  <pre><code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;video width="320" height="240" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+  
+  <h3>9. Line Breaks & Horizontal Rule</h3>
+  <pre><code>&lt;p&gt;First Line&lt;br&gt;Second Line&lt;/p&gt;
+&lt;hr&gt;  <!-- Horizontal line --> </code></pre>
+  
+  <h3>10. Semantic Elements</h3>
+  <pre><code>&lt;header&gt;Header Section&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;section&gt;Section&lt;/section&gt;
+&lt;article&gt;Article&lt;/article&gt;
+&lt;aside&gt;Sidebar&lt;/aside&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</code></pre>
+  
+  <p>With HTML, you can create structured, readable, and interactive web pages.</p>
+</section>
+<hr />
+  <section id="playground">
+    <h2>Interactive Code Playground</h2>
+    <p>Try writing your own HTML, CSS, and JavaScript code below. Click "Run" to see your code in action!</p>
+    <textarea id="code" rows="12" placeholder="Write your HTML code here..."><!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        h1 { color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Welcome to the playground!</p>
+</body>
+</html></textarea>
+    <br><br>
+    <button onclick="runCode()">Run Code</button>
+    <button onclick="clearCode()"> Clear</button>
+    <iframe id="output"></iframe>
+    </section>
+<hr />
+<section id="about">
+  <h2>About me</h2>
+  <p>Fill out the form below and send me a message!</p>
+  
+  <form action="./send.php" method="POST">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
     
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-      
-      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      scrollIndicator.style.width = scrollPercent + '%';
-    });
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    const overlay = document.getElementById('overlay');
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+    
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br>
+    
+    <button type="submit">Send Message</button>
+  </form>
+  
+  <p>All messages will be sent directly to <b>Mariam.</b></p>
+</section>
 
-    function toggleMenu() {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      overlay.classList.toggle('active');
-      document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-    }
-
-    function closeMenu() {
-      menuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    menuToggle.addEventListener('click', toggleMenu);
-    overlay.addEventListener('click', closeMenu);
-
-    navLinks.addEventListener('click', (e) => {
-      if (e.target.tagName === 'A') {
-        closeMenu();
-      }
-    });
-    const sections = document.querySelectorAll('section[id]');
-    const navLinksArray = document.querySelectorAll('.nav-links a[data-section]');
-
-    function updateActiveSection() {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinksArray.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('data-section') === current) {
-          link.classList.add('active');
-        }
-      });
-    }
-    window.addEventListener('scroll', updateActiveSection);
-    updateActiveSection(); 
-    navLinksArray.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          const offsetTop = targetSection.offsetTop - 80;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    function runCode() {
-      const code = document.getElementById('code').value;
-      const output = document.getElementById('output');
-      const blob = new Blob([code], { type: 'text/html' });
-      const url = URL.createObjectURL(blob);
-      
-      output.src = url;
-      
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-    }
-
-    function clearCode() {
-      document.getElementById('code').value = '';
-      document.getElementById('output').src = '';
-    }
-document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-        closeMenu();
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.opacity = '0';
-      setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-      }, 100);
-    });
+<style>
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    outline: none;
+  }
+  
+  form button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #2563eb;
+  }
+</style>
+  <script src="main.js"></script>
+</body>
+</html>
