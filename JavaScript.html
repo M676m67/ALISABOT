@@ -225,7 +225,7 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
   <h2>About me</h2>
   <p>Fill out the form below and send me a message!</p>
   
-  <form action="#" method="POST">
+  <form id="contactForm" action="#" method="POST">
     <label for="name">Your Name:</label><br>
     <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
     
@@ -278,6 +278,13 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
     background-color: #2563eb;
   }
 </style>
+
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+  });
+</script>
   <script src="main.js"></script>
 </body>
 </html>
